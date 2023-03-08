@@ -55,4 +55,30 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    public void deleteCity(City city)
+    {
+
+        if(cities.contains(city))
+        {
+            cities.remove(city);
+        }else
+        {
+            System.err.println("city no found");
+        }
+    }
+
+    public boolean hasCity(City city)
+    {
+        if(cities.contains(city))
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
+
+
 }
