@@ -13,11 +13,11 @@ import java.util.ArrayList;
 
 public class CustomListTest {
 
-    private ArrayList<City> citylist;
+    private ArrayList<City> citylist = new ArrayList<>();;
 
     public void init()
     {
-        citylist = new ArrayList<>();
+        //citylist =
     }
 
     @Test
@@ -32,5 +32,16 @@ public class CustomListTest {
 
     }
 
+    @Test
+    public void addCityTest() {
+        CustomList list;
 
-}
+        list = new CustomList(null,new ArrayList<>());
+
+        int listSize = list.getCount();
+        list.addCity(new City("Estevan", "SK"));
+        assertEquals(list.getCount(), listSize + 1);
+    }
+
+
+    }
