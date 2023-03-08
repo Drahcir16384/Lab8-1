@@ -63,6 +63,23 @@ public class CustomListTest {
 
     }
 
+    public void testCountCity()
+    {
+        CustomList list = new CustomList(null, citylist);
+        City city = new City("Edmonton", "AB");
+        list.addCity(city);
+        assertEquals(1, list.getCount());
+        City city2 = new City("Toronto", "ON");
+        list.addCity(city2);
+        assertEquals(2, list.getCount());
+        list.deleteCity(city2);
+        assertEquals(1, list.getCount());
+
+        list.deleteCity(city);
+        assertEquals(0, list.getCount());
+
+    }
+
 
 
 
